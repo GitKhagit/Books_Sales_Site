@@ -1,0 +1,46 @@
+@import "grid.scss";
+
+@function font_calc($min_font, $stand_fond) {
+  $result: calc(#{$min_font}px + (#{$stand_fond} - #{$min_font}) * (100vw / 1920));
+  @return $result;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.header{
+    background-color: #0d0c0c;
+    border-bottom: 0.3vh solid #5e0996;
+
+    &__site_name{
+        font: normal font_calc(10, 28) bold;
+        color: white;
+    }
+    &__button{
+        font: normal font_calc(10, 28) bold;
+        color: white;
+    }
+}
+
+.main{
+    background-color: #0d0c0c;
+    &__text .wrapper{
+        background: linear-gradient(to bottom left, gold, purple);
+        &__content{
+            font: normal font_calc(9, 21) normal;
+            line-height: 200%;
+            color: white;
+            background-color: #0d0c0c;
+            &__form.download{
+                button{
+                    background: none;
+                    border: none;
+                    color: white;
+                    font: normal font_calc(10, 25) bold;
+                }
+            }
+        }
+    }
+}

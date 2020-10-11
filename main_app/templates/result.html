@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Contacts
+{% endblock %}
+
+{% block main__text_field_payment %}
+<form class="wrapper__content__form download" method="get" action="{{ url_for('download')}}">
+   <button type="submit">Скачать книгу</button>
+</form>
+{% endblock %}

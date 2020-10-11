@@ -1,0 +1,21 @@
+
+.signin_form .email{grid-area: email;}
+.signin_form .password{grid-area: password;}
+
+
+.signin_form div:nth-of-type(1){grid-area: form_wrapper1;}
+.signin_form div:nth-of-type(2){grid-area: form_wrapper2;}
+.g-recaptcha{grid-area: recaptcha;}
+.signin_form .submit{grid-area: submit;}
+.signin_form .label_email{grid-area: label_email;}
+.signin_form .label_password{grid-area: label_password;}
+.signin_form{
+    display: grid;
+    grid-template:
+    'form_wrapper1' 1fr
+    'form_wrapper2' 1fr
+    'submit' 1fr
+    'recaptcha' 1fr
+    /1fr;
+    grid-row-gap: 10vh;
+}
